@@ -1,6 +1,5 @@
 # encoding:utf-8
 """
-2019-12-06 15: 56: 29
 author: wgc
 version: 0.1
 """
