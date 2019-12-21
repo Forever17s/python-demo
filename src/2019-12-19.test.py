@@ -14,7 +14,7 @@ import requests
 """
 
 # def main():
-#     f = open('./tests/测试.txt', 'r', encoding='utf-8')
+#     f = open('./../tests/测试.txt', 'r', encoding='utf-8')
 #     print(f.read())
 #     f.close()
 """
@@ -24,7 +24,7 @@ import requests
 # def main():
 #     f = None
 #     try:
-#         f = open('./tests/测试a.txt', 'r', encoding='utf-8')
+#         f = open('./../tests/测试a.txt', 'r', encoding='utf-8')
 #         print(f.read())
 #     except FileNotFoundError:
 #         print('无法打开指定的文件！')
@@ -55,18 +55,18 @@ import requests
 
 # def main():
 #     # 一次性读取整个文件内容
-#     # with open('./tests/测试.txt', 'r', encoding='utf-8') as f:
+#     # with open('./../tests/测试.txt', 'r', encoding='utf-8') as f:
 #     #     print(f.read())
 
 #     # 通过 for - in 循环逐行读取
-#     with open('./tests/测试.txt', mode='r') as f:
+#     with open('./../tests/测试.txt', mode='r') as f:
 #         for line in f:
 #             print(line, end='')
 #             time.sleep(0.5)
 #     print()
 
 #     # 读取文件按行读取到列表中
-#     # with open('./tests/测试.txt') as f:
+#     # with open('./../tests/测试.txt') as f:
 #     #     lines = f.readlines()
 #     # print(lines)
 """
@@ -86,7 +86,8 @@ import requests
 #     fs_list = []
 #     try:
 #         for fileName in fileNames:
-#             fs_list.append(open('./tests/' + fileName, 'w', encoding='utf-8'))
+#             fs_list.append(
+#                 open('./../tests/' + fileName, 'w', encoding='utf-8'))
 #         for num in range(1, 10000):
 #             if is_prime(num):
 #                 if num < 100:
@@ -107,10 +108,10 @@ import requests
 
 # def main():
 #     try:
-#         with open('./tests/pic1.jpg', 'rb') as fs1:
+#         with open('./../tests/pic1.jpg', 'rb') as fs1:
 #             data = fs1.read()
 #             print(type(data))  # <class 'bytes'>
-#         with open('./tests/pic2.jpg', 'wb') as fs2:
+#         with open('./../tests/pic2.jpg', 'wb') as fs2:
 #             fs2.write(data)
 
 #     except FileNotFoundError:
@@ -142,7 +143,7 @@ import requests
 #         ]
 #     }
 #     try:
-#         with open('./tests/data.json', 'w', encoding='utf-8') as fs:
+#         with open('./../tests/data.json', 'w', encoding='utf-8') as fs:
 #             json.dump(mydict, fs)
 #     except IOError as e:
 #         print(e)
@@ -160,7 +161,7 @@ def main():
     payload = {'key1': 'value1', 'key2': 'value2', 'key3': None}
     resp = requests.get('http://httpbin.org/get', params=payload)
     try:
-        with open('./tests/request.json', 'w', encoding='utf-8') as fs:
+        with open('./../tests/request.json', 'w', encoding='utf-8') as fs:
             json.dump(json.loads(resp.text), fs)
     except IOError as e:
         print(e)
