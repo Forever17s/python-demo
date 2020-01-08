@@ -2,6 +2,7 @@
 """
 author: wgc
 version: 1.0
+title: Python语言进阶
 """
 """
 排序算法（选择、冒泡和归并） 和查找算法（顺序和折半）
